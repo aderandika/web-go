@@ -41,15 +41,18 @@
             </tr>
         </thead>
         <tbody>
-            <!-- {{ range .categories }}
+            {{ range .products }}
                 <tr>
                     <td>{{ .Name }}</td>
+                    <td>{{ .Category.Name }}</td>
+                    <td>{{ .Stock }}</td>
                     <td>
-                        <a href="/categories/edit?id={{ .Id }}" class="btn btn-warning text-light">Edit</a>
-                        <a href="/categories/delete?id={{ .Id }}" class="btn btn-danger text-light" onclick="return confirm('Apakah kamu yakin untuk menghapus data?')">Delete</a>
+                        <a href="/products/detail?id={{ .Id }}" class="btn btn-info text-light">Detail</a>
+                        <a href="/products/edit?id={{ .Id }}" class="btn btn-warning text-light">Edit</a>
+                        <a href="/products/delete?id={{ .Id }}" class="btn btn-danger text-light" onclick="return confirm('Apakah kamu yakin untuk menghapus data?')">Delete</a>
                     </td>
                 </tr>
-            {{ end }} -->
+            {{ end }}
         </tbody>
       </table>
      </div>

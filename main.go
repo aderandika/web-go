@@ -23,10 +23,10 @@ func main() {
 	http.HandleFunc("/categories/delete", CategoryController.Delete)
 
 	// Product
-	http.HandleFunc("products", ProductController.Index)
-	http.HandleFunc("products/add", ProductController.Add)
-	http.HandleFunc("products/edit", ProductController.Edit)
-	http.HandleFunc("products/delete", ProductController.Delete)
+	http.HandleFunc("/products", ProductController.Index)
+	http.HandleFunc("/products/add", ProductController.Add)
+	http.HandleFunc("/products/edit", ProductController.Edit)
+	http.HandleFunc("/products/delete", ProductController.Delete)
 
 	log.Println("Server sedang berjalan")
 	http.ListenAndServe(":8080", nil)
